@@ -1,0 +1,85 @@
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: grid;
+    gap: 10px;
+    min-width: 100vp;
+    grid-template-areas:
+      "navbar navbar navbar navbar"
+      "content-list content-list content-list content-details"
+      "footer footer footer footer";
+  }
+
+  .navbar {
+    grid-area: navbar;
+    color: #fff;
+    background-repeat: repeat;
+    background-image: url("NUK1265 maggi Recipes banner 1500x700px opt2A.jpg");
+    background-size: cover;
+    padding: 65px;
+    font-size: 24px;
+  }
+
+  .content-list {
+    grid-area: content-list;
+    display: grid;
+    justify-content: left;
+    gap: 10px;
+    grid-template-areas: repeat(auto-fll, 300px);
+    margin-bottom: 50px;
+  }
+
+  .recipe-box {
+    background-color: #e99f71;
+    box-shadow: 0 2px 4px rgba(11, 11, 11, 0.962);
+    border: 1px solid rgba(210, 114, 46, 0.99);
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: all 0.3s ease;
+    width: 450px;
+    margin: 10px;
+  }
+
+  .recipe-box:hover {
+    background-color: rgb(252, 200, 116);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .recipe-box.selected {
+    background-color: rgb(226, 135, 7);
+  }
+
+  .content-details {
+    grid-area: content-details;
+    margin: 50px;
+    gap: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .content-details button {
+    width: 100px;
+    height: 39px;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    background-color: #000000;
+    padding: 17px;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 20px;
+  }
+  .selected {
+    background-color: lightblue; 
+  }
